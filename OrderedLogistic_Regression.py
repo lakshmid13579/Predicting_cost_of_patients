@@ -14,10 +14,11 @@ dataset[dataset.dtypes[(dataset.dtypes=="float64")|(dataset.dtypes=="int64")]
                 
 #Finding if there is any correlation between the variables               
 corr= dataset.corr(method='spearman')
+dataset[['reimbursement2009', 'reimbursement2008', 'bucket2009', 'bucket2009']].corr(method='pearson')
 
 #Data Preprocessing
 dataset = dataset.drop(['reimbursement2008', 'reimbursement2009'], axis=1)
-dataset = dataset.sort_values(by='bucket2008', ascending=True)
+#dataset = dataset.sort_values(by='bucket2008', ascending=True)
 X = dataset.iloc[:, 0:12].values                                 
 y = dataset.iloc[:, 13].values
                 
@@ -30,8 +31,7 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-from sklearn.preprocessing import scale
-y_train = scale( y_train, axis=0, with_mean=True, with_std=True, copy=True )               
+               
             
 #Fitting OrderedLogistic Regression
 from scipy import stats
@@ -44,6 +44,7 @@ y_pred = c.predict(X_test)
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 cm = confusion_matrix(y_test, y_pred)
+cm = pd.DataFrame(cm)
 ac = accuracy_score(y_test, y_pred)
                  
                  
