@@ -17,7 +17,6 @@ corr= dataset.corr(method='spearman')
 
 #Data Preprocessing
 dataset = dataset.drop(['reimbursement2008', 'reimbursement2009'], axis=1)
-dataset = dataset.sort_values(by='bucket2008', ascending=True)
 X = dataset.iloc[:, 0:12].values                                 
 y = dataset.iloc[:, 13].values
 
@@ -44,3 +43,4 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 cm = confusion_matrix(y_test, y_pred)
 ac = accuracy_score(y_test, y_pred)
+cm = pd.DataFrame(cm)
