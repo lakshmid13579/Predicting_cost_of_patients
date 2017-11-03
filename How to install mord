@@ -1,0 +1,9 @@
+#How to install Mord package for anaconda-spyder users
+
+Go to the site : https://pypi.python.org/pypi/mord/0.4
+download the latest mord package file and unzip the file
+open the anaconda command prompt(or gitcmd)and enter:
+pip install mord
+Close the spyder and reopen
+check the installation by typing the below code in spyder:
+import mord as m
