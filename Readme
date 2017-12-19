@@ -1,11 +1,11 @@
 The dataset contains details about the age of the person and various disease conditions like alzheimers,	arthritis,	cancer,	copd,	
-depression,	diabetes,	heart.failure,	ihd,	kidney,	osteoporosis,	stroke and reimbursed amounts for the year 2008 and 2009 if any. The buckets
-are created based on the amount disbursed as 
+depression,	diabetes,	heart.failure,	ihd,	kidney,	osteoporosis,	stroke and reimbursed amounts for the year 2008 and 2009 if any. The 
+buckets are created based on the amount disbursed as 
 Reimbursment	Bucket
 0-2999	       1
 3000-7999	     2
 8000-19999	   3
 19000-54999	   4
 >55000	       5
-The goal is to predict the bucket of the patient for the year 2010. Only the age and reimbursement amount are continuous. All the disease variables
-are binary implying 1 is a diseased/diagnosed condition.
+The goal is to predict the bucket of the patient for the year 2010. Only the age and reimbursement amount are continuous. All the disease 
+variables are binary implying 1 is a diseased/diagnosed condition.
