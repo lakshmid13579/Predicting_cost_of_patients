@@ -1,4 +1,4 @@
-The dataset contains details about the age of the person and various disease conditions like alzheimers,	arthritis,	cancer,	copd,	
+The dataset contains details about the age of the person and various disease conditions like alzheimers, arthritis, cancer,	copd,	
 depression,	diabetes,	heart.failure,	ihd,	kidney,	osteoporosis,	stroke and reimbursed amounts for the year 2008 and 2009 if any. The 
 buckets are created based on the amount disbursed as 
 Reimbursment	Bucket
